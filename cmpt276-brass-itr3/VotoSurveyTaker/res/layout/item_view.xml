@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/imgSurveyStatus"
+		android:contentDescription="@string/imgsurveystatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:maxHeight="80dp"
+        android:maxWidth="80dp"
+        android:src="@drawable/survey_not_started" />
+
+    <TextView
+        android:id="@+id/txtSurveyTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/imgSurveyStatus"
+        android:text="@string/loading"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txtQuestionsInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imgSurveyStatus"
+        android:layout_alignLeft="@+id/txtSurveyTitle"
+        android:text="@string/loading"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/txtInviteDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txtQuestionsInfo"
+        android:layout_toRightOf="@+id/imgSurveyStatus"
+        android:text="@string/loading"
+        android:textSize="14sp" />
+
+</RelativeLayout>

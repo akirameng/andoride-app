@@ -1,0 +1,42 @@
+Scrum Master: Alan Lee
+
+1. View Surveys
+---------------
+(Done) Meng - User launches application and sees a nice looking animated welcome screen. 
+(Done) Meng - create a dialog to display asking for telephone number and click submit to go to the main activity.
+(Done) Alan - On first load, user asked to enter their phone number. Prompt may be on the welcome screen, or on separate screen/dialog. Optional feature: User may be able to select between entering a phone number and using the phone's real phone number. 
+(Done) Alan - Application logs into VOTO Mobile server using provided phone number to retrieve the user's registration ID. The registration ID is stored in the app for future program runs so user need not enter their phone number again.
+(Done) Alan/David - User is shown a list of all the surveys that they have been invited to take. Each survey is shown in a list with the following information: title, invite date, number of questions answered, total number of questions in the survey, and an icon. Icon shows user if they have completed no questions, have complement some questions, or completed all questions.
+
+Variation 1:
+(Done) Alan - If user has previously entered a phone number, application automatically skips the phone-number entry step.
+
+Variation 2:
+(Done) Alan - If the user's phone number is rejected by the server then user is shown a user-friendly error message and ask to re-enter their phone number.
+(Done) Meng -after the animation done, skip button changed to re-enter button, click re-enter to re-write the phone number.
+
+
+2. Take a Open-Text (non-audio) Survey
+--------------------------------------
+(Done) - Assume user has completed the View Surveys use case and is viewing the list of surveys.
+(Done) - User selects a survey to take. Assume survey only contains open-ended text questions: no need to support multiple choice or numeric questions. 
+(Done) David - Taking a survey causes the app to switch to a new screen which shows the first unanswered question in the survey. Displayed are the question's title, its number in the survey (for example Q5 of 10, or as a progress bar with text), and its SMS text prompt. Assume all text will have been translated automatically into the user's preferred language by the server where possible.
+(Done) Alan/David - If the user has already provided an answer for this question, app displays previous answer in the input box.
+(Done) Meng/David - User types in a response to the question in a multi-line plain-text entry field, and then selects to submit the answer to the server. The app moves on to the next question (if any).
+(Done) David - User decides to revisit a previous question by using a button or other means on the UI (such as swiping left or right). User sees previous question and answer, edits answer, resubmits which advances to next question.
+(Done) - User decides not to answer the question, so they use a button or other means on the UI (such as swiping left or right). This causes no answer to be submitted to the server.
+(Done) David - When the user has completed (or skipped) the last question, they return to the main list of available surveys. User sees the list of surveys refresh with update information (such as the survey is now partially, or fully complete).
+(Done) Alan - From the survey list screen, user presses Android's back button to quit the application.
+
+3. Question Activity
+--------------------
+(Done) David - setup layout for question activity.
+(Done) Meng - implement networkError dataChanged() function.
+(Done) Meng, revised by David - write function to load question for question screen
+
+Variation 1:
+- If user presses the Android's back button while answering a survey question, they are returned to the list of surveys without the answer being submitted to the server.
+
+Variation 2:
+(Done) David - If the user has already completed all questions in a survey, trying to take the survey again starts off at the first question in the survey. (Otherwise would try and start at first unanswered question, of which there are none).
+- User is able to resubmit and/or skip answers to the survey as before.

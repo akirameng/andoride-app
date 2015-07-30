@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/activity_bg"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/listSurveys"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btnRefresh" >
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/txtSurveyActivityTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnRefresh"
+        android:layout_alignBottom="@+id/btnRefresh"
+        android:layout_centerHorizontal="true"
+        android:text="@string/surveys"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="23sp" />
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/logout_hires"
+        android:minWidth="48dip" />
+
+    <Button
+        android:id="@+id/btnOptions"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/overflow_hires" />
+
+    <Button
+        android:id="@+id/btnRefresh"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/btnOptions"
+        android:background="@drawable/refresh_hires"
+        android:minWidth="48dip" />
+ 
+</RelativeLayout>

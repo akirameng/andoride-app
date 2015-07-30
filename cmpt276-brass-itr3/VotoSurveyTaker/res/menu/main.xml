@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menuLanguages"
+        android:title="@string/lang">
+    </item>
+    <item
+        android:id="@+id/menuAbout"
+        android:title="@string/about">
+    </item>
+
+</menu>

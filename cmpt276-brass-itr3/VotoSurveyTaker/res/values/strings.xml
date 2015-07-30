@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="app_name">VotoSurveyTaker</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_welcome_screen">WelcomeScreen</string>
+    <string name="phone_prompt">Please enter your phone #:</string>
+    <string name="submit">Submit</string>
+    <string name="survey_taker">Survey Taker</string>
+    <string name="skip">Skip</string>
+    <string name="SurveyList">SurveyList</string>
+    <string name="QuestionList">QuestionList</string>
+    <string name="surveys">Surveys</string>
+    <string name="title_activity_question_list">QuestionListActivity</string>
+    <string name="refresh">Refresh</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="loading" tools:ignore="TypographyEllipsis">Loading...</string>
+    <string name="title_activity_question_multiple">QuestionMultipleActivity</string>
+    <string name="title_activity_question_number">QuestionNumberActivity</string>
+    <string name="play">Play</string>
+    <string name="pause">Pause</string>
+    <string name="stop">Stop</string>
+    <string name="_invitation_">" (Invitation #: "</string>
+    <string name="survey_title_">"Survey Title: "</string>
+    <string name="already_on_the_first_question_">Already on the first question.</string>
+    <string name="reached_end_of_survey_">Reached end of survey.</string>
+    <string name="no_selected">No Selected</string>
+    <string name="please_select_a_valid_answer">Please select a valid answer</string>
+    <string name="finished_the_last_question_">Finished the last question.</string>
+    <string name="answer_submitted_">Answer submitted.</string>
+    <string name="current_question_id_">Current Question ID: #</string>
+    <string name="question_">"Question "</string>
+    <string name="_of_">" of "</string>
+    <string name="invalid_number_please_try_again_">Invalid number. Please try again.</string>
+    <string name="select_a_question_first_">Select a question first.</string>
+    <string name="answer_can_not_be_empty_or_only_spaces_please_try_again_">Answer can not be empty or only spaces. Please try again.</string>
+    <string name="re_enter_number">Re-Enter Number</string>
+    <string name="no_login_details_found_please_enter_your_phone_number_">No login details found, please Enter your Phone Number:</string>
+    <string name="exit">Exit</string>
+    <string name="have_registration_id_">"Have Registration ID: "</string>
+    <string name="date_invited_">"Date Invited: "</string>
+    <string name="questions_answered_">"Questions answered: "</string>
+    <string name="log_out">Log Out</string>
+    <string name="title_activity_survey_description">SurveyDescriptionActivity</string>
+    <string name="survey_exited">Survey exited</string>
+    <string name="survey_description_intro">Introduction</string>
+    <string name="survey_description_conclusion">Conclusion</string>
+    <string name="an_error_has_occured_">An error has occurred.</string>
+    <string name="ok">OK</string>
+    <string name="more">More</string>
+    <string name="detailed_error">Detailed error</string>
+    <string name="details_">Details: \n</string>
+    <string name="something_went_wrong_accessing_the_server_but_no_details_available_">Something went wrong accessing the server, but no details available.</string>
+    <string name="error_of_type_">"Error of type "</string>
+    <string name="server_says_">Server says: \n</string>
+    <string name="noconnectionerror">NoConnectionError</string>
+    <string name="no_connection_error_">No Connection Error: \n</string>
+    <string name="please_connect_to_the_internet_and_try_again_">Please connect to the internet and try again.</string>
+    <string name="could_not_find_subscriber_with_this_phone">Could not find subscriber with this phone</string>
+    <string name="preparing">Preparing</string>
+    <string name="error_playing_media_contact_administrator_or_submit_a_bug_report_">Error playing media, contact administrator Or submit a bug report.</string>
+    <string name="playing">Playing</string>
+    <string name="stopped">Stopped</string>
+    <string name="paused">Paused</string>
+    <string name="title_activity_loading_screen">LoadingScreenActivity</string>
+    <string name="already_on_intro">There is nothing before the introduction.</string>
+    <string name="title_activity_language">LanguageActivity</string>
+    <string name="title_activity_about">About</string>
+    <string name="this_is_the_survey_taker_application_written_by_">This is the survey taker application written by:</string>
+    <string name="alan_lee_david_baik_meng_zhao">Alan Lee, David Baik, Meng Zhao</string>
+    <string name="lang">Languages</string>
+    <string name="about">About</string>
+    <string name="license">This proxy and data-management layer are written by Brian Fraser (bfraser@cs.sfu.ca).
+This source code is distributed under the Revised BSD License:\n\n
+Copyright (c) 2014, Alan Lee, Meng Zhao, David Baik
+All rights reserved.\n
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:\n\t\t
+    * Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.\n\t\t
+    * Redistributions in binary form must reproduce the above copyright
+      notice, this list of conditions and the following disclaimer in the
+      documentation and/or other materials provided with the distribution.\n\t\t
+    * Neither the name of Alan Lee, Meng Zhao, David Baik, Brian Fraser nor the
+      names of its contributors may be used to endorse or promote products
+      derived from this software without specific prior written permission.\n\n
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL BRIAN FRASER OR SIMON FRASER UNIVERSITY BE LIABLE FOR ANY
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</string>
+    <string name="current">Current:</string>
+    <string name="info_not_loaded">Info not loaded...</string>
+    <string name="imgsurveystatus">imgSurveyStatus</string>
+    <string name="voto_survey_taker">Voto Survey Taker</string>
+    <string name="voto_gcm_">"VOTO GCM: "</string>
+    <string name="loading_">Loading...</string>
+
+</resources>

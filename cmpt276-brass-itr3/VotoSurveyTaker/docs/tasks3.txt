@@ -1,0 +1,156 @@
+Scrum Master: David Baik
+
+1. Select preferred language
+----------------------------
+- (Done) Meng  Assume user is logged in.
+- (Done) Meng  User selects to change their preferred language.
+- (Done) Meng  Application shows a list of languages currently offered by the organization
+- (Done) Meng  User selects one of the languages as their preferred language. Once changed, when the 
+  application fetches new survey information, the server will send the correct language.
+
+NEW: Proxy/data-layer now support required functions.
+
+
+2. Push notification
+--------------------
+-  (Done) Meng User starts the application and logs in.
+-  (Done) Meng  Application contacts server and verifies phone number and gets registartion ID.
+-  (Done) Meng  Application contacts Google Cloud Messaging (GCM) and registers for push notifications.
+-  (Done) Meng  Application transmits its GCM ID (received from GCM) to VOTO.
+-  (Done) Meng  User uses application as desired and likely exits application after use. 
+-  (Done) Meng   Application receives GCM push notifications and adds a notification to Android's Notification Area.
+-  (Done) Meng    User taps on the notification and is taken to the application.
+  Optionally, user is taken directly to the survey which generated the notification.
+- (Done) Meng User then responds to survey as usual.
+- (Done) Meng User then logs out.
+- (Done) Meng  Application unregisters the user's GCM ID with VOTO (thereby disabling GCM push notifications).
+
+Alternative: 
+- (Done) Meng If user logs out and logs back in, application will re-register with GCM, and send the updated GCM ID to voto.
+
+Alternative:
+- (Done) Meng  If user has already logged in previously and has a phone-number / VOTO registration ID saved, then
+  application automatically logs in again. In this case, there is no need to re-register for GCM push 
+  notifications with either GCM or VOTO.
+
+NOTE: VOTO Server does not currently generate GCM push notifications, but GCM registration works.
+
+
+3. Network Activity
+-------------------
+-(Done) Meng  Application displays an indication that it is waiting for data when:
+	- (Done) Meng Retrieving the user's registration ID from VOTO server.
+	- (Done) Meng Loading list of surveys.
+	- (Done) Meng Loading survey details.
+- (Done) Meng Application may also display indication that it is waiting for data any other time that 
+  data is being sent to, or read from the server.
+
+NEW: Data layer supports all required methods. (Mar 29)
+
+
+4. UI Improvements
+------------------
+Application user interface must be well designed for the end user experience. This includes:
+- Must hide all details which are uninteresting to the user: 
+  survey/question ID's, question type labels ("OPEN"), 
+- Give feedback when answer (new or revised) is submitted, such as a toast. May also vibrate.
+- Use images for buttons as much as possible: 
+	- arrows for next/previous,
+	- Audio control images (play, pause, stop)
+- Group UI elements together with meaningful labels/boxes. 
+  i.e, don't have the audio control buttons spread out across the UI; put them in a group.
+- Make important text large: SMS text on questions
+- Good UI design for responding to questions: make input boxes noticable, well labeled, and large 
+  enough to handle a reasonable size for a lengthy answer.
+- Background images on all screens where possible/reasonable.
+- Avoid use of options menu as much as possible because it is not visible; make common options 
+  visible in either action bar or as buttons.
+- All activities must have meaningful titles. If showing survey/question text in title, carefully 
+  handle case where text is longer than will fit in the available space. (Application must be 
+  perfectly usable if all text does not fit).
+
+
+5. Invitation List Improvements
+-------------------------------
+- Assume user is logged in and viewing available invitations list.
+- (Done) David Application Highlight un-completed surveys (different background colour, text colour, or 
+  otherwise dramatically highlights them)
+- (Done) David Application sorts invitations:
+	- Primary sort order: uncompleted surveys are shown above completed surveys.
+	- Secondary sort order: sort invitations by date; newest at the top.
+	  (i.e., uncompleted surveys at top, which are sorted by date; completed surveys at 
+	   bottom, sorted by date).
+
+
+6. About Screen
+---------------
+(Done)- Assume user has application running and is logged in.
+(Done)(Placeholder)- User views application's About screen, which is linked from some main part of the application's UI.
+(Done)- About screen shows the names of all group members, a license statement, and any attributions for code
+  written by others that is used in the application. The license statement may be either just the 
+  name of a well known license and a link to an official web page showing the license (such as GNU's 
+  GPL site), or the full text of the license, which may be on another screen/dialog. The screen looks 
+  well laid out with large, clear writing for important parts, and includes at least one image.
+(Done)- License text need not be translated into other languages.
+
+(DONE) ALAN - A License.txt file must be found in your Eclipse project (either in the root directory or docs/ folder).
+This file must state the license you are releasing your code under. May be open source or not (your choice).
+
+Tip: The data-layer and proxy have a license as well which you must abide by. 
+
+
+7. Team specific changes
+------------------------
+The client's representative (Dr. Fraser) will conduct a usability test of your UI to determine 
+if all features implemented in iterations 1 and 2 are usable for the end user.
+
+The instructor (Dr. Fraser) will conduct a code review to ensure the project code is at least
+reasonably clean.
+
+It is likely that some changes will be required based on each of the above reviews. These changes
+will be worth marks for your iteration code.
+
+
+8. Project Wrap-up
+------------------
+See: http://www.cs.sfu.ca/CourseCentral/276/bfraser/project-wrapup.html
+- Normal submission of iteration 3 deliverables (ZIP file of project via Eclipse).
+- In-class demo on last day of class (not a presentation, just a demo of application's features).
+- Agreed on list of who did what.
+- Individual peer-reviews
+
+		
+[VALUE = 5]
+LoadScreenActivity
+- Why is currentQuestionIndex a field not local? Likewise other fields (like questions)
+(DONE)Alan - CustomArrayAdapter:
+	- Indentation for comments.
+	- Don't suppressed "unused" warnings; remove the field. (Actually, likely want to use it, instead of calling App... to get data.
+	- Poor line-wrapping "inv" and then ".getNumberSurveyQuestions()"
+Questions:
+- Duplicate code fro things like setupPreviousButton(). Use base class to implement these features once.
+(DONE)Alan - Magic numbers (2000000000)
+	
+	
+	
+[VALUE = 20]
+Splash Screen
+-(Done) Meng  Images and animations are all at top of screen; move towards the centre.
+Surveys:
+(Done) Alan - Make logout and refresh button icons instead of text.
+Question Responding:
+(Done)- Put SMS text more centrally on the screen. Make the font bigger.
+(Done)- Remove the invitation number
+(Done)- Change all buttons to use icons instead of words.
+(Done)- Better grouping of controls: play, pause, stop together; put caption on top of these.
+- Hide "Previous' button when nothing previous to go to. 
+- Field for numeric value should have a caption on it.
+(Done)- Move submit button to below the input field.
+(Done)- Put the "Question 1/6" text at the top, not the very bottom.
+- Clicking next/previous with new data entered should ask if you are sure you want to discard changes.
+- MC entry needs to be obviously clickable. Make better use of space. Must show all MC options at once instead of the spinner.
+(Done)- Open ended: Text entry box must be much bigger.
+(Done)- Make all SMS text bigger (intro, questions, conclusion); use up available screen room better.
+Generally, quite a bit of work is required to make the UI good. At the moment it seems pieced together. A big part of the Survey Taker app is a smooth and well polished UI.
+
+

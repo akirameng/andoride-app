@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.brass.votosurveytaker"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="18"
+        tools:ignore="OldTargetApi" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission android:name="com.brass.votosurveytaker.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="com.brass.votosurveytaker.permission.C2D_MESSAGE" />
+    
+    <application
+        android:name="com.brass.votosurveytaker.App"
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <meta-data android:name="com.google.android.gms.version"
+           android:value="@integer/google_play_services_version" />
+        
+        
+         <receiver
+            android:name=".MyBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.brass.votosurveytaker" />
+            </intent-filter>
+                
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="com.brass.votosurveytaker" />
+            </intent-filter>
+        </receiver>
+        <service android:name=".GcmIntentService" />
+        <activity
+            android:name="com.brass.votosurveytaker.WelcomeScreen"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.brass.votosurveytaker.SurveyListActivity"
+            android:label="@string/SurveyList" >
+        </activity>
+        <activity
+            android:name="com.brass.votosurveytaker.QuestionOpenActivity"
+            android:label="@string/QuestionList" >
+        </activity>
+        <activity
+            android:name="com.brass.votosurveytaker.QuestionMultipleActivity"
+            android:label="@string/title_activity_question_multiple" >
+        </activity>
+        <activity
+            android:name="com.brass.votosurveytaker.QuestionNumberActivity"
+            android:label="@string/title_activity_question_number" >
+        </activity>
+        <activity
+            android:name="com.brass.votosurveytaker.SurveyDescriptionActivity"
+            android:label="@string/title_activity_survey_description" >
+        </activity>
+        <activity
+            android:name="com.brass.votosurveytaker.LoadingScreenActivity"
+            android:label="@string/title_activity_loading_screen" >
+        </activity>
+        <activity
+            android:name="com.brass.votosurveytaker.LanguageActivity"
+            android:label="@string/title_activity_language" >
+        </activity>
+        <activity
+            android:name="com.brass.votosurveytaker.AboutActivity"
+            android:label="@string/title_activity_about" >
+        </activity>
+    </application>
+
+</manifest>

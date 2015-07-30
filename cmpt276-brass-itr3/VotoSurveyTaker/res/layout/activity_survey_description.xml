@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/activity_bg"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/btnPreviousQDescription"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/previous_hires" />
+
+    <TextView
+        android:id="@+id/txtSurveyDescriptionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="@string/loading"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="36sp" />
+
+    <Button
+        android:id="@+id/btnNextQDescription"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/next_hires" />
+
+    <TextView
+        android:id="@+id/txtSurveyIdAndTitleDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtSurveyDescriptionTitle"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/loading"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/txtSMSPromptDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txtPlayDescription"
+        android:layout_below="@+id/txtSurveyIdAndTitleDescription"
+        android:layout_centerHorizontal="true"
+        android:padding="18dp"
+        android:text="@string/loading"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="26sp" />
+
+    <Button
+        android:id="@+id/btnStopAudioDescription"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBaseline="@+id/btnPauseAudioDescription"
+        android:layout_alignBottom="@+id/btnPauseAudioDescription"
+        android:layout_toRightOf="@+id/btnPauseAudioDescription"
+        android:background="@drawable/stop_hires" />
+
+    <Button
+        android:id="@+id/btnPauseAudioDescription"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/btnPreviousQDescription"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="109dp"
+        android:background="@drawable/pause_hires" />
+
+    <Button
+        android:id="@+id/btnPlayAudioDescription"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBaseline="@+id/btnPauseAudioDescription"
+        android:layout_alignBottom="@+id/btnPauseAudioDescription"
+        android:layout_toLeftOf="@+id/btnPauseAudioDescription"
+        android:background="@drawable/play_hires" />
+
+    <TextView
+        android:id="@+id/txtAudioStatusDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnPlayAudioDescription"
+        android:layout_alignRight="@+id/btnStopAudioDescription"
+        android:layout_below="@+id/btnPlayAudioDescription"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/txtPlayDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnPlayAudioDescription"
+        android:layout_alignLeft="@+id/btnPlayAudioDescription"
+        android:layout_alignRight="@+id/btnPlayAudioDescription"
+        android:gravity="center"
+        android:text="@string/play" />
+
+    <TextView
+        android:id="@+id/txtPauseDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnPauseAudioDescription"
+        android:layout_alignLeft="@+id/btnPauseAudioDescription"
+        android:layout_alignRight="@+id/btnPauseAudioDescription"
+        android:gravity="center"
+        android:text="@string/pause" />
+
+    <TextView
+        android:id="@+id/txtStopDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnStopAudioDescription"
+        android:layout_alignLeft="@+id/btnStopAudioDescription"
+        android:layout_alignRight="@+id/btnStopAudioDescription"
+        android:gravity="center"
+        android:text="@string/stop" />
+
+</RelativeLayout>

@@ -1,0 +1,122 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/activity_bg"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/btnStopAudioMC"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBaseline="@+id/btnPauseAudioMC"
+        android:layout_alignBottom="@+id/btnPauseAudioMC"
+        android:layout_toRightOf="@+id/btnPauseAudioMC"
+        android:background="@drawable/stop_hires"
+        android:minHeight="48dp"
+        android:minWidth="48dp" />
+
+    <Button
+        android:id="@+id/btnPlayAudioMC"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBaseline="@+id/btnPauseAudioMC"
+        android:layout_alignBottom="@+id/btnPauseAudioMC"
+        android:layout_toLeftOf="@+id/btnPauseAudioMC"
+        android:background="@drawable/play_hires" />
+
+    <TextView
+        android:id="@+id/txtPlayMC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnPlayAudioMC"
+        android:layout_alignLeft="@+id/btnPlayAudioMC"
+        android:layout_alignRight="@+id/btnPlayAudioMC"
+        android:gravity="center"
+        android:text="@string/play" />
+
+    <TextView
+        android:id="@+id/txtStopMC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnStopAudioMC"
+        android:layout_alignLeft="@+id/btnStopAudioMC"
+        android:layout_alignRight="@+id/btnStopAudioMC"
+        android:gravity="center"
+        android:text="@string/stop" />
+
+    <TextView
+        android:id="@+id/txtProgressMC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="@string/loading"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/btnPreviousQMC"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/previous_hires" />
+
+    <Button
+        android:id="@+id/btnNextQMC"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/next_hires" />
+
+    <TextView
+        android:id="@+id/txtAudioStatusMC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnPlayAudioMC"
+        android:layout_alignRight="@+id/btnStopAudioMC"
+        android:layout_below="@+id/btnPauseAudioMC"
+        android:gravity="center" />
+
+    <Button
+        android:id="@+id/btnPauseAudioMC"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/btnPreviousQMC"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/pause_hires" />
+
+    <TextView
+        android:id="@+id/txtPauseMC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnPauseAudioMC"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/pause" />
+
+    <TextView
+        android:id="@+id/txtSMSPromptMC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/spinnerAnswer"
+        android:layout_below="@+id/txtProgressMC"
+        android:layout_centerHorizontal="true"
+        android:padding="18dp"
+        android:text="@string/loading"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="36sp" />
+
+    <Spinner
+        android:id="@+id/spinnerAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+    
+</RelativeLayout>

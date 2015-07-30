@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/activity_bg"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/btnStopAudioOpen"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBaseline="@+id/btnPauseAudioOpen"
+        android:layout_alignBottom="@+id/btnPauseAudioOpen"
+        android:layout_toRightOf="@+id/btnPauseAudioOpen"
+        android:background="@drawable/stop_hires" />
+
+    <Button
+        android:id="@+id/btnPlayAudioOpen"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBaseline="@+id/btnPauseAudioOpen"
+        android:layout_alignBottom="@+id/btnPauseAudioOpen"
+        android:layout_toLeftOf="@+id/btnPauseAudioOpen"
+        android:background="@drawable/play_hires" />
+
+    <TextView
+        android:id="@+id/txtPlayOpen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnPlayAudioOpen"
+        android:layout_alignLeft="@+id/btnPlayAudioOpen"
+        android:layout_alignRight="@+id/btnPlayAudioOpen"
+        android:gravity="center"
+        android:text="@string/play" />
+
+    <TextView
+        android:id="@+id/txtStopOpen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnStopAudioOpen"
+        android:layout_alignLeft="@+id/btnStopAudioOpen"
+        android:layout_alignRight="@+id/btnStopAudioOpen"
+        android:gravity="center"
+        android:text="@string/stop" />
+
+    <TextView
+        android:id="@+id/txtProgressOpen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="@string/loading"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/btnPreviousQOpen"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/previous_hires" />
+
+    <Button
+        android:id="@+id/btnNextQOpen"
+		android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/next_hires" />
+
+    <TextView
+        android:id="@+id/txtAudioStatusOpen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnPlayAudioOpen"
+        android:layout_alignRight="@+id/btnStopAudioOpen"
+        android:layout_below="@+id/btnPauseAudioOpen"
+        android:gravity="center" />
+
+    <Button
+        android:id="@+id/btnPauseAudioOpen"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/btnPreviousQOpen"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/pause_hires" />
+
+    <TextView
+        android:id="@+id/txtPauseOpen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnPauseAudioOpen"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/pause" />
+
+    <EditText
+        android:id="@+id/fieldTextEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnSubmitOpen"
+        android:layout_toLeftOf="@+id/btnSubmitOpen"
+        android:layout_toRightOf="@+id/btnPreviousQOpen"
+        android:background="@android:drawable/edit_text"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:paddingTop="100dp"
+        android:textColor="@android:color/primary_text_light" />
+
+    <Button
+        android:id="@+id/btnSubmitOpen"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/txtStopOpen"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/send_hires" />
+
+    <TextView
+        android:id="@+id/txtSMSPromptOpen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fieldTextEntry"
+        android:layout_below="@+id/txtProgressOpen"
+        android:layout_centerHorizontal="true"
+        android:padding="18dp"
+        android:text="@string/loading"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="36sp" />
+
+</RelativeLayout>

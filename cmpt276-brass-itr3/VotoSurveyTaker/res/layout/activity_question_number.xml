@@ -1,0 +1,133 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/activity_bg"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/btnStopAudioNumber"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBaseline="@+id/btnPauseAudioNumber"
+        android:layout_alignBottom="@+id/btnPauseAudioNumber"
+        android:layout_toRightOf="@+id/btnPauseAudioNumber"
+        android:background="@drawable/stop_hires" />
+
+    <Button
+        android:id="@+id/btnPlayAudioNumber"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBaseline="@+id/btnPauseAudioNumber"
+        android:layout_alignBottom="@+id/btnPauseAudioNumber"
+        android:layout_toLeftOf="@+id/btnPauseAudioNumber"
+        android:background="@drawable/play_hires" />
+
+    <TextView
+        android:id="@+id/txtPlayNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnPlayAudioNumber"
+        android:layout_alignLeft="@+id/btnPlayAudioNumber"
+        android:layout_alignRight="@+id/btnPlayAudioNumber"
+        android:gravity="center"
+        android:text="@string/play" />
+
+    <TextView
+        android:id="@+id/txtStopNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnStopAudioNumber"
+        android:layout_alignLeft="@+id/btnStopAudioNumber"
+        android:layout_alignRight="@+id/btnStopAudioNumber"
+        android:gravity="center"
+        android:text="@string/stop" />
+
+    <TextView
+        android:id="@+id/txtProgressNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="@string/loading"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/btnPreviousQNumber"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/previous_hires" />
+
+    <Button
+        android:id="@+id/btnNextQNumber"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/next_hires" />
+
+    <TextView
+        android:id="@+id/txtAudioStatusNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnPlayAudioNumber"
+        android:layout_alignRight="@+id/btnStopAudioNumber"
+        android:layout_below="@+id/btnPauseAudioNumber"
+        android:gravity="center" />
+
+    <Button
+        android:id="@+id/btnPauseAudioNumber"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/btnPreviousQNumber"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/pause_hires" />
+
+    <TextView
+        android:id="@+id/txtPauseNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnPauseAudioNumber"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/pause" />
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnSubmitNumber"
+        android:layout_toLeftOf="@+id/btnSubmitNumber"
+        android:layout_toRightOf="@+id/btnPreviousQNumber"
+        android:background="@android:drawable/edit_text"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:paddingTop="100dp"
+        android:textColor="@android:color/primary_text_light" />
+
+    <Button
+        android:id="@+id/btnSubmitNumber"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/txtStopNumber"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/send_hires" />
+
+    <TextView
+        android:id="@+id/txtSMSPromptNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editTextNumber"
+        android:layout_below="@+id/txtProgressNumber"
+        android:layout_centerHorizontal="true"
+        android:padding="18dp"
+        android:text="@string/loading"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="36sp" />
+
+</RelativeLayout>

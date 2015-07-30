@@ -1,0 +1,101 @@
+Scrum Master: Meng Zhao
+
+1. Handle All Question Types
+---------------------------------------------------------------
+- Assume user logged in, viewing list of invitations.
+- User opens an invitation for a survey containing all types of questions.
+
+- (Done) Meng For open text questions, user is prevented from submitting an answer which is empty or only spaces.
+  (Done) Meng create question selector class to switch to different activities.
+  (Done) Meng create other question type activities.
+  
+- (Done) Meng For multiple choice questions, user sees the question prompt, and set of available response options.
+- (Done) Meng User taps on the response they want to give and survey advances to next question.
+- (Done) Meng  User returns to the question and graphically sees which response they previously gave.
+- (Done) Meng  User taps a different answer and new answer is submitted to server. App advances to next question.
+
+- (Done) Meng For numeric questions, user sees question prompt and is able to respond with a number.
+- (Done) Meng How the user responds is open for development team to decide; could be text box, spinner, or other method such that it is efficient for user to enter a number between -2,000,000,000 and +2,000,000,000
+- (Done) Meng  User tries to enter a number larger than +/- 2 billion and is prevented by the application (either not possible, or generates an error message).
+- (Done) Meng User tries to enter a string, like "Hello" and is prevented by the application (either not possible, or generates an error message).
+- (Done) Meng User enters a valid number, like 42, and advances to the next questions.
+- (Done) Meng  User returns to the question, sees previous answer already entered, changes answer and resubmits answer which advances to the next question.
+
+2. Change user
+---------------------------------------------------------------
+- (Done) Meng Assume user is logged.
+- (Done) Meng User logs out of their current login somehow.
+- (Done) Meng User is shown log-in screen.
+- (Done) Meng  User the logs in as a different user.
+
+Alternative:
+- (Done) Meng If user exits the application after logging out, and then relaunches the application it should not automatically log in until the user successfully logs in.
+
+3.. Good Error Messages
+---------------------------------------------------------------
+- (Done) Alan User starts the application when login credentials are not saved.
+- (Done) Alan User enters a phone number that does not exist as a subscriber. 
+- (Done) Meng  User is shown a user-friendly error message with text that will be translated to the user's locale.
+- (Done) Alan User sees button (or other means) to view more details, which shows more detailed error information which may be available.
+- (Done) Alan User dismissed the error message, and logs in correctly.
+- (Done) Alan User disables the Internet connection to the device.
+- (Done) Alan User selects an invitation to view. 
+- (Done) Alan After a little time, the application will timeout and show a user-friendly error message with all text that will be translated into the user's locale. Again, button available to see details from program.
+- (Done) Alan Dismissing the error and re-enabling the network connection leaves the program in a state where the user can resume using it, such as refreshing the list, or returning to the previous list and back to trigger a re-downloading of the information.
+- (Done) Alan On any screen, for any errors which are not handled explicitly (i.e., not the network error or the login error, ...), user sees a generic error message which is translated into their locale. Details button reveals full information.
+  (Modified) Meng  user sees a generic error message which is translated into their locale. Details button reveals full information.
+PLEASE NOTE, LOCALE ISN'T SUPPPORTED UNTIL 4 IS DONE - Alan
+
+4. App Internationalization
+---------------------------------------------------------------
+- (Done) Meng Assume user currently has phone set to English.
+- (Done) Meng User uses application and sees all messages built into the application displayed in English.
+- (Done) Meng User exits the application and runs the Android "Custom Locale" program and selects a different language.
+- (Done) Meng User launches the application and sees all messages built into the application displayed in the new language. Graphics which feature text such as corporate slogans need not be translated. Graphics critical to application navigation (such as an image saying "Surveys" or the like) must be translated.
+
+Development Notes:
+- Team may choose any additional non-English language to support. See the Custom Locale app for a list.
+- In the Tasklist file in the docs/ folder of your project, list the additional language you are supporting.
+- String selection from strings.xml done automatically by Android when properly configured:
+  http://developer.android.com/guide/topics/resources/localization.html
+
+
+5. Introduction and Conclusion
+---------------------------------------------------------------
+- Assume user logged in and has been invited to a survey which contains an introduction and conclusion.
+- User selects survey which includes an introduction.
+- (Done) David User sees the introduction message (which the server has automatically translated to the user's preferred language). 
+- (Done) David User moves on to the first question (using a means such as a button, or swipe to advance).
+- (Done) David User then moves back to the introduction to re-read it, and then re-returns to the first question.
+- User answers (or skips) all questions in the survey.
+- (Done) David After last question, user is shown the survey conclusion message.
+- (Done) David User advances past the conclusion and is returned to the invitations-list page.
+
+Development Note:
+- API now supports introduction and conclusion.
+
+6. Audio Message Playback
+---------------------------------------------------------------
+- Assume user is logged in and has been invited to a survey which has text (SMS) and voice content.
+- User opens survey which supports both text and voice.
+- (Done) Alan On introduction, user clicks a button (or other mechanism) to begin playback of the audio message. 
+- (Done) Alan While the first part of the audio message is being downloaded, the application shows some indication that the message is downloading/buffering.
+- (Done) Alan Music begins playing and UI shows indication that it is actively playing.
+- (Done) Alan After message has played for a couple seconds, user chooses to pause the message. UI shows status that message is paused.
+- (Done) Alan User selects to resume playing the message and audio resumes at the location it was paused at as well as UI indicates status.
+- (Done) Alan User selects to stop the music, and music stops and UI updates status.
+- (Done) Alan User selects to play the music and it resumes playing from the beginning. UI displays correct status.
+- (Done) Alan User moves on to first question and audio automatically stops.
+- (Done) Alan User returns to introduction and clicks play. Music starts playing from the beginning of the message.
+- (Done) Alan User selects to go back to the previous activity (back button), or leave the application (home button). Audio stops playing.
+
+TODO: Move to other Q's activities
+- For each of question and the introduction and the conclusion, the above controls and behavior are available. On multiple choice questions, assume that the message reads out the multiple choice options.
+
+Development Note:
+- API now supports audio URLs.
+
+
+General Development Requirements
+---------------------------------------------------------------
+- Must not have bin/ or gen/ folder in SVN.
